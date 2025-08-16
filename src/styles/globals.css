@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --bg-cream: #fff6e8;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(94, 59, 43, 0.08);
+}
+.sprinkle {
+  position: relative;
+}
+.sprinkle:before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background-image: radial-gradient(#ff9f58 1.2px, transparent 1.2px),
+    radial-gradient(#ffb4c6 1.2px, transparent 1.2px),
+    radial-gradient(#ffd7b3 1.2px, transparent 1.2px);
+  background-position: 0 0, 12px 16px, 24px 8px;
+  background-size: 24px 24px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
+}
+.marquee-track {
+  display: flex;
+  width: 200%;
+}
+.marquee-inner {
+  display: inline-block;
+  white-space: nowrap;
+  padding-block: 0.75rem;
+  width: 100%;
+  animation: biscuit-marquee 16s linear infinite;
+  color: rgba(94, 59, 43, 0.8);
+}
+.marquee-track .marquee-inner + .marquee-inner {
+  animation-delay: 8s;
+}
+@keyframes biscuit-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
