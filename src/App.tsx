@@ -9,6 +9,7 @@ const useProgress = () => {
   const { scrollYProgress } = useScroll();
   return useSpring(scrollYProgress, { stiffness: 100, damping: 20, mass: 0.2 });
 };
+
 function ProgressBar() {
   const scaleX = useProgress();
   return (
@@ -18,6 +19,7 @@ function ProgressBar() {
     />
   );
 }
+
 function Background() {
   return (
     <div aria-hidden className="fixed inset-0 -z-10">
@@ -38,6 +40,7 @@ function Background() {
     </div>
   );
 }
+
 function Header() {
   const [open, setOpen] = React.useState(false);
   return (
@@ -45,7 +48,7 @@ function Header() {
       <div className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src="/src/assets/paw.svg" className="h-8 w-8 drop-shadow-logo" />
-          <span className="font-extrabold tracking-wide">BISCUIT</span>
+          <span className="font-extrabold tracking-wide">MOONDOG</span>
         </div>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <a
@@ -68,7 +71,7 @@ function Header() {
           </a>
         </nav>
         <div className="hidden md:block">
-          <Button>Buy $BISCUIT</Button>
+          <Button>Buy $MOONDOG</Button>
         </div>
         <button
           className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl glass"
@@ -104,7 +107,7 @@ function Header() {
               FAQ
             </a>
             <Button className="mt-1" onClick={() => setOpen(false)}>
-              Buy $BISCUIT
+              Buy $MOONDOG
             </Button>
           </div>
         </div>
@@ -112,6 +115,7 @@ function Header() {
     </header>
   );
 }
+
 function Hero() {
   return (
     <section className="relative w-full py-20 md:py-28 text-center sprinkle">
@@ -122,58 +126,63 @@ function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold bg-white/70 border border-biscuit-brown/10">
-            <PawPrint className="w-4 h-4" /> Kaspa • Community Petcoin
+            <PawPrint className="w-4 h-4" /> Kaspa • Moonbound Meme Coin
           </div>
+
           <h1 className="mt-6 text-5xl md:text-7xl font-black leading-tight tracking-tight">
             Meet{" "}
             <span className="text-biscuit-orange drop-shadow-logo">
-              Biscuit
+              MoonDog
             </span>
           </h1>
+
           <p className="mt-4 mx-auto max-w-2xl text-lg md:text-xl text-biscuit-brown/80">
-            The cutest dog on-chain. Fetching hearts, wagging charts. Zero
-            drama—just wholesome meme energy.
+            “The little dog with big dreams. Cute, loyal, and loved by the Kaspa
+            community. A Moonbound puppy on a mission to the moon.”
           </p>
+
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button>Buy $WORTHLESS</Button>
+            <Button>Buy $MOONDOG</Button>
             <Button className="bg-white text-black hover:bg-gray-100 flex items-center gap-2">
               <Twitter className="h-4 w-4" /> Follow X/Twitter
             </Button>
             <Button className="bg-white text-black hover:bg-gray-100 flex items-center gap-2">
-              <MessageCircle className="h-4 w-4" /> Join Community
+              <MessageCircle className="h-4 w-4" /> Join the Pack
             </Button>
           </div>
+
           <div className="mt-10 grid md:grid-cols-[1fr,1fr] gap-8 items-center">
             <img
-              src="/src/assets/biscuit-mascot-transparent.png"
+              src="/src/assets/moondog-mascot.png"
               className="w-full max-w-md mx-auto"
-              alt="Biscuit mascot"
+              alt="MoonDog mascot"
             />
             <div className="text-left mx-auto max-w-xl">
               <Card className="p-6">
-                <h3 className="text-xl font-bold">Why Biscuit?</h3>
+                <h3 className="text-xl font-bold">Why MoonDog?</h3>
                 <p className="mt-2 text-biscuit-brown/80">
-                  Because the internet needs a good boi. Simple, adorable, and
-                  built for share‑ability across feeds.
+                  Because every mission to the moon needs a good dog. Adorable,
+                  easy to share, and made for the Moonbound moment.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <span className="text-xs px-3 py-1 rounded-full bg-biscuit-peach/70">
-                    Wholesome
+                    Meme-Ready
                   </span>
                   <span className="text-xs px-3 py-1 rounded-full bg-biscuit-peach/70">
                     Cute
                   </span>
                   <span className="text-xs px-3 py-1 rounded-full bg-biscuit-peach/70">
-                    Community‑First
+                    Moonbound-Aligned
                   </span>
                 </div>
               </Card>
             </div>
           </div>
+
           <div className="mt-8">
             <Marquee>
               <span className="px-4">
-                🦴 FETCH • GOOD VIBES • BISCUIT • WOOF • KASPA • 🐾
+                🌕 MOONDOG • WOOF • TO THE MOON • 🚀🐶
               </span>
             </Marquee>
           </div>
@@ -182,25 +191,26 @@ function Hero() {
     </section>
   );
 }
+
 function About() {
   const items = [
     {
-      title: "Adorable by Design",
-      text: "A clean, friendly brand that melts timelines. Cute mascot, big energy.",
+      title: "Born for Moonbound",
+      text: "The first launchpad on Kaspa deserves the first dog on the moon. MoonDog is here to ride the rocket.",
     },
     {
-      title: "Share‑Ready Memes",
-      text: "Sticker packs, GIFs, and templates that make spreading Biscuit effortless.",
+      title: "Adorable + Viral",
+      text: "A clean, lovable brand that melts timelines. Stickers, memes, and GIFs everyone shares.",
     },
     {
-      title: "Simple to Join",
-      text: "No confusing promises. Grab a bone, give a follow, and play fetch.",
+      title: "Simple + Fun",
+      text: "No promises, no drama. Grab a bag, join the pack, and watch this pup chase rockets.",
     },
   ];
   return (
     <section id="about" className="relative py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-3xl md:text-4xl font-bold">Biscuit in a Bite</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">MoonDog in a Bite</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {items.map((it) => (
             <Card
@@ -224,26 +234,25 @@ function HowToBuy() {
       text: "Install MetaMask to store and manage your tokens securely.",
     },
     {
-      title: "Fund Your Wallet",
-      text: "Add KAS to your MetaMask wallet. You’ll need it to buy Biscuit.",
+      title: "Fund with KAS",
+      text: "Add KAS to your MetaMask wallet — you’ll need it for launch.",
     },
     {
-      title: "Join the Launch",
-      text: "Biscuit Puppy will launch on Moonbound — the first fair launch launchpad on Kaspa.",
+      title: "Join Moonbound",
+      text: "MoonDog will launch fairly on Moonbound — the first launchpad on Kaspa.",
     },
     {
-      title: "Own the Cutest Puppy",
-      text: "Complete your purchase and join the most adorable community on-chain.",
+      title: "Fetch Your Doggo",
+      text: "Complete your buy and join the pack. Cute dog, moon mission secured.",
     },
   ];
 
   return (
     <section id="how-to-buy" className="relative py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-3xl md:text-4xl font-bold">How to Buy</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">How to Get $MOONDOG</h2>
         <p className="mt-3 max-w-2xl text-biscuit-brown/80">
-          The Biscuit Puppy is the cutest puppy. Here’s how you can join the
-          pack from day one.
+          Join the mission from day one.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
           {steps.map((step, index) => (
@@ -263,9 +272,12 @@ function HowToBuy() {
 
 function FAQ() {
   const faqs = [
-    { q: "Is Biscuit a good dog?", a: "Yes. 13/10 good boi." },
-    { q: "Utility?", a: "Cuteness, memes, and bringing people together." },
-    { q: "When moon?", a: "First we wag, then we zoom." },
+    { q: "Is MoonDog a good dog?", a: "Yes. 13/10 astronaut pup." },
+    {
+      q: "Utility?",
+      a: "Memes, community, and being the mascot of Kaspa’s moon mission.",
+    },
+    { q: "When moon?", a: "First we wag, then we zoom. 🚀🐾" },
   ];
   return (
     <section id="faq" className="relative py-16 md:py-20">
@@ -283,6 +295,7 @@ function FAQ() {
     </section>
   );
 }
+
 function Footer() {
   return (
     <footer className="border-t border-biscuit-brown/10">
@@ -291,9 +304,9 @@ function Footer() {
           <div className="flex items-center gap-2">
             <img src="/src/assets/paw.svg" className="h-8 w-8" />
             <div>
-              <p className="font-semibold">BISCUIT</p>
+              <p className="font-semibold">MOONDOG</p>
               <p className="text-xs text-biscuit-brown/70">
-                Cute Kaspa meme dog. Woof.
+                The Kaspa meme dog chasing the moon.
               </p>
             </div>
           </div>
@@ -307,12 +320,13 @@ function Footer() {
           </div>
         </div>
         <p className="mt-6 text-center text-xs text-biscuit-brown/70">
-          © {new Date().getFullYear()} Biscuit. All treats reserved.
+          © {new Date().getFullYear()} MoonDog. All rights reserved.
         </p>
       </div>
     </footer>
   );
 }
+
 export default function App() {
   return (
     <div className="min-h-screen">
