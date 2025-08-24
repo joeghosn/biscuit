@@ -12,7 +12,7 @@ export default function Button({ className = "", children, ...props }: Props) {
       className={cn(
         "inline-flex items-center justify-center gap-2 whitespace-nowrap",
         "rounded-2xl px-5 py-3 font-semibold shadow-sm",
-        "bg-biscuit-orange text-white hover:brightness-110",
+        "bg-moondog-orange text-white hover:brightness-110",
         className
       )}
       {...props}

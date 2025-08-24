@@ -34,13 +34,13 @@
   white-space: nowrap;
   padding-block: 0.75rem;
   width: 100%;
-  animation: biscuit-marquee 16s linear infinite;
+  animation: moondog-marquee 16s linear infinite;
   color: rgba(94, 59, 43, 0.8);
 }
 .marquee-track .marquee-inner + .marquee-inner {
   animation-delay: 8s;
 }
-@keyframes biscuit-marquee {
+@keyframes moondog-marquee {
   0% {
     transform: translateX(0%);
   }

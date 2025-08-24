@@ -15,7 +15,7 @@ function ProgressBar() {
   return (
     <motion.div
       style={{ scaleX }}
-      className="fixed left-0 top-0 right-0 h-1 origin-left bg-biscuit-orange z-50"
+      className="fixed left-0 top-0 right-0 h-1 origin-left bg-moondog-orange z-50"
     />
   );
 }
@@ -44,7 +44,7 @@ function Background() {
 function Header() {
   const [open, setOpen] = React.useState(false);
   return (
-    <header className="sticky top-0 z-40 border-b border-biscuit-brown/10 bg-biscuit-cream/70 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-moondog-brown/10 bg-moondog-cream/70 backdrop-blur">
       <div className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src="/src/assets/paw.svg" className="h-8 w-8 drop-shadow-logo" />
@@ -53,19 +53,19 @@ function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <a
             href="#about"
-            className="text-biscuit-brown/70 hover:text-biscuit-brown transition"
+            className="text-moondog-brown/70 hover:text-moondog-brown transition"
           >
             About
           </a>
           <a
             href="#how-to-buy"
-            className="text-biscuit-brown/70 hover:text-biscuit-brown transition"
+            className="text-moondog-brown/70 hover:text-moondog-brown transition"
           >
             How to Buy
           </a>
           <a
             href="#faq"
-            className="text-biscuit-brown/70 hover:text-biscuit-brown transition"
+            className="text-moondog-brown/70 hover:text-moondog-brown transition"
           >
             FAQ
           </a>
@@ -95,7 +95,7 @@ function Header() {
         </button>
       </div>
       {open && (
-        <div className="md:hidden border-t border-biscuit-brown/10">
+        <div className="md:hidden border-t border-moondog-brown/10">
           <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3">
             <a href="#about" onClick={() => setOpen(false)}>
               About
@@ -125,18 +125,18 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold bg-white/70 border border-biscuit-brown/10">
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold bg-white/70 border border-moondog-brown/10">
             <PawPrint className="w-4 h-4" /> Kaspa • Moonbound Meme Coin
           </div>
 
           <h1 className="mt-6 text-5xl md:text-7xl font-black leading-tight tracking-tight">
             Meet{" "}
-            <span className="text-biscuit-orange drop-shadow-logo">
+            <span className="text-moondog-orange drop-shadow-logo">
               MoonDog
             </span>
           </h1>
 
-          <p className="mt-4 mx-auto max-w-2xl text-lg md:text-xl text-biscuit-brown/80">
+          <p className="mt-4 mx-auto max-w-2xl text-lg md:text-xl text-moondog-brown/80">
             “The little dog with big dreams. Cute, loyal, and loved by the Kaspa
             community. A Moonbound puppy on a mission to the moon.”
           </p>
@@ -153,25 +153,25 @@ function Hero() {
 
           <div className="mt-10 grid md:grid-cols-[1fr,1fr] gap-8 items-center">
             <img
-              src="/src/assets/moondog-mascot.png"
+              src="/src/assets/moondog-headshot.png"
               className="w-full max-w-md mx-auto"
               alt="MoonDog mascot"
             />
             <div className="text-left mx-auto max-w-xl">
               <Card className="p-6">
                 <h3 className="text-xl font-bold">Why MoonDog?</h3>
-                <p className="mt-2 text-biscuit-brown/80">
+                <p className="mt-2 text-moondog-brown/80">
                   Because every mission to the moon needs a good dog. Adorable,
                   easy to share, and made for the Moonbound moment.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  <span className="text-xs px-3 py-1 rounded-full bg-biscuit-peach/70">
+                  <span className="text-xs px-3 py-1 rounded-full bg-moondog-peach/70">
                     Meme-Ready
                   </span>
-                  <span className="text-xs px-3 py-1 rounded-full bg-biscuit-peach/70">
+                  <span className="text-xs px-3 py-1 rounded-full bg-moondog-peach/70">
                     Cute
                   </span>
-                  <span className="text-xs px-3 py-1 rounded-full bg-biscuit-peach/70">
+                  <span className="text-xs px-3 py-1 rounded-full bg-moondog-peach/70">
                     Moonbound-Aligned
                   </span>
                 </div>
@@ -203,14 +203,14 @@ function About() {
       text: "A clean, lovable brand that melts timelines. Stickers, memes, and GIFs everyone shares.",
     },
     {
-      title: "Simple + Fun",
-      text: "No promises, no drama. Grab a bag, join the pack, and watch this pup chase rockets.",
+      title: "Fair + Simple",
+      text: "No presale, no insiders. MoonDog launches fair on Moonbound for everyone.",
     },
   ];
   return (
     <section id="about" className="relative py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-3xl md:text-4xl font-bold">MoonDog in a Bite</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">Why MoonDog</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {items.map((it) => (
             <Card
@@ -218,7 +218,7 @@ function About() {
               className="p-6 hover:translate-y-[-3px] transition-transform"
             >
               <h3 className="text-lg font-semibold">{it.title}</h3>
-              <p className="mt-2 text-biscuit-brown/80">{it.text}</p>
+              <p className="mt-2 text-moondog-brown/80">{it.text}</p>
             </Card>
           ))}
         </div>
@@ -231,19 +231,19 @@ function HowToBuy() {
   const steps = [
     {
       title: "Get a Wallet",
-      text: "Install MetaMask to store and manage your tokens securely.",
+      text: "Use any EVM wallet (e.g. MetaMask) to store your tokens.",
     },
     {
       title: "Fund with KAS",
-      text: "Add KAS to your MetaMask wallet — you’ll need it for launch.",
+      text: "Add KAS to your wallet — you’ll need it for launch.",
     },
     {
       title: "Join Moonbound",
       text: "MoonDog will launch fairly on Moonbound — the first launchpad on Kaspa.",
     },
     {
-      title: "Fetch Your Doggo",
-      text: "Complete your buy and join the pack. Cute dog, moon mission secured.",
+      title: "Complete Purchase",
+      text: "Buy MoonDog and join the mission.",
     },
   ];
 
@@ -251,7 +251,7 @@ function HowToBuy() {
     <section id="how-to-buy" className="relative py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="text-3xl md:text-4xl font-bold">How to Get $MOONDOG</h2>
-        <p className="mt-3 max-w-2xl text-biscuit-brown/80">
+        <p className="mt-3 max-w-2xl text-moondog-brown/80">
           Join the mission from day one.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
@@ -261,7 +261,7 @@ function HowToBuy() {
               className="p-6 hover:translate-y-[-3px] transition-transform"
             >
               <h3 className="text-lg font-semibold">{step.title}</h3>
-              <p className="mt-2 text-biscuit-brown/80">{step.text}</p>
+              <p className="mt-2 text-moondog-brown/80">{step.text}</p>
             </Card>
           ))}
         </div>
@@ -272,12 +272,18 @@ function HowToBuy() {
 
 function FAQ() {
   const faqs = [
-    { q: "Is MoonDog a good dog?", a: "Yes. 13/10 astronaut pup." },
     {
-      q: "Utility?",
-      a: "Memes, community, and being the mascot of Kaspa’s moon mission.",
+      q: "What makes MoonDog special?",
+      a: "It’s the first meme dog aligned with Moonbound launchpad.",
     },
-    { q: "When moon?", a: "First we wag, then we zoom. 🚀🐾" },
+    {
+      q: "How do I get it?",
+      a: "Through the fair launch on Moonbound — Follow our socials so you don’t miss the announcement.",
+    },
+    {
+      q: "What’s next?",
+      a: "Build the brand, grow the pack, and keep chasing the moon.",
+    },
   ];
   return (
     <section id="faq" className="relative py-16 md:py-20">
@@ -287,7 +293,7 @@ function FAQ() {
           {faqs.map((f) => (
             <Card key={f.q} className="p-6">
               <h3 className="font-semibold">{f.q}</h3>
-              <p className="mt-2 text-biscuit-brown/80">{f.a}</p>
+              <p className="mt-2 text-moondog-brown/80">{f.a}</p>
             </Card>
           ))}
         </div>
@@ -298,15 +304,15 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer className="border-t border-biscuit-brown/10">
+    <footer className="border-t border-moondog-brown/10">
       <div className="mx-auto max-w-6xl px-4 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             <img src="/src/assets/paw.svg" className="h-8 w-8" />
             <div>
               <p className="font-semibold">MOONDOG</p>
-              <p className="text-xs text-biscuit-brown/70">
-                The Kaspa meme dog chasing the moon.
+              <p className="text-xs text-moondog-brown/70">
+                The Moonbound dog chasing the moon.
               </p>
             </div>
           </div>
@@ -319,7 +325,7 @@ function Footer() {
             </Button>
           </div>
         </div>
-        <p className="mt-6 text-center text-xs text-biscuit-brown/70">
+        <p className="mt-6 text-center text-xs text-moondog-brown/70">
           © {new Date().getFullYear()} MoonDog. All rights reserved.
         </p>
       </div>

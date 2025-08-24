@@ -1,4 +1,4 @@
-# Biscuit — Cute Dog Meme Coin Landing (Kaspa)
+# Moondog — Cute Dog Meme Coin Landing (Kaspa)
 
 Run locally:
 

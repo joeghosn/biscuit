@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        biscuit: {
+        moondog: {
           cream: "#FFF6E8",
           peach: "#FFD7B3",
           orange: "#FF9F58",
